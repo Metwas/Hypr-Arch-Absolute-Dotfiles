@@ -21,3 +21,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # Must enter this in the .zshrc file 
 # plugins=(zsh-nvm zsh-autosuggestions)
 
+# ZSH THEME
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+
+# change ZSH_THEME=powerlevel10k/powerlevel10k
+
