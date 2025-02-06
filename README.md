@@ -2,7 +2,10 @@
 pacman -Syu --noconfirm
 
 # Hyprland base
-pacman -S --noconfirm hyprland waybar rofi-wayland hyprpaper hyprlock
+pacman -S --noconfirm hyprland rofi-wayland hyprpaper hyprlock xdg-desktop-portal-hyprland
+
+# waybar ??
+# pacman -S waybar
 
 # Tools
 pacman -S --noconfirm kitty fastfetch base-devel ninja gcc zsh fzf
@@ -25,4 +28,16 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 
 # change ZSH_THEME=powerlevel10k/powerlevel10k
+
+# Autostart Hyprland stuff
+
+# Add the following to the ~/.bash_profile OR ~/.zprofile
+# if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
+#  exec Hyprland
+# fi
+
+# Add the following hyprland tools to the ~/.config/hypr/hyprland.conf
+# exec-once = waybar &
+# exec-once = hyprpaper &
+
 
