@@ -5,7 +5,7 @@ pacman -Syu --noconfirm
 pacman -S --noconfirm hyprland waybar rofi-wayland hyprpaper 
 
 # Tools
-pacman -S --noconfirm kitty fastfetch base-devel ninja gcc zsh
+pacman -S --noconfirm kitty fastfetch base-devel ninja gcc zsh fzf
 
 # Drivers
 pacman -S --noconfirm mesa xf86-video-amdgpu vulkan-radeon libva-mesa-driver
