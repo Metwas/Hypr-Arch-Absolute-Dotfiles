@@ -8,13 +8,13 @@ pacman -S --noconfirm hyprland rofi-wayland hyprpaper hyprlock xdg-desktop-porta
 # pacman -S waybar
 
 # Tools
-pacman -S --noconfirm kitty fastfetch base-devel ninja gcc git make ncurses flex bison gperf python2-pyserial zsh fzf wireshark-cli cava
+pacman -S --noconfirm kitty fastfetch base-devel ninja gcc git make ncurses flex bison gperf python2-pyserial zsh fzf wireshark-cli cava yazi
 
 # Drivers
 pacman -S --noconfirm mesa xf86-video-amdgpu vulkan-radeon libva-mesa-driver
 
 # Apps
-yay -S --noconfirm thorium-browser-bin vscodium esp-idf yazi
+yay -S --noconfirm thorium-browser-bin vscodium esp-idf
 
 # NVM (zsh)
 yay -S ttf-meslo-nerd-font-powerlevel10k
