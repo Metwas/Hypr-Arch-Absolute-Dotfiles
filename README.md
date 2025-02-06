@@ -1,15 +1,15 @@
 # Update
-pacman -Syu
+pacman -Syu --noconfirm
 
 # Hyprland base
-pacman -S hyprland waybar rofi-wayland hyprpaper 
+pacman -S --noconfirm hyprland waybar rofi-wayland hyprpaper 
 
 # Tools
-pacman -S kitty fastfetch base-devel ninja gcc
+pacman -S --noconfirm kitty fastfetch base-devel ninja gcc
 
 # Drivers
-pacman -S mesa xf86-video-amdgpu vulkan-radeon libva-mesa-driver
+pacman -S --noconfirm mesa xf86-video-amdgpu vulkan-radeon libva-mesa-driver
 
 # Apps
-yay -S thorium-browser-bin vscodium
+yay -S --noconfirm thorium-browser-bin vscodium
 
