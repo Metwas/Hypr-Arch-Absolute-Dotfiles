@@ -2,14 +2,14 @@
 pacman -Syu
 
 # Hyprland base
-pacman -Sy hyprland waybar rofi-wayland hyprpaper 
+pacman -S hyprland waybar rofi-wayland hyprpaper 
 
 # Tools
-pacman -Sy kitty fastfetch base-devel ninja gcc
+pacman -S kitty fastfetch base-devel ninja gcc
 
 # Drivers
-pacman -Sy mesa xf86-video-amdgpu vulkan-radeon libva-mesa-driver
+pacman -S mesa xf86-video-amdgpu vulkan-radeon libva-mesa-driver
 
 # Apps
-yay -Sy thorium-browser-bin vscodium
+yay -S thorium-browser-bin vscodium
 
