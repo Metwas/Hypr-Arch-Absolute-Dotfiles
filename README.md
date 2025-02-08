@@ -34,8 +34,8 @@ sudo pacman -S --noconfirm gperf
 sudo pacman -S --noconfirm zsh
 sudo pacman -S --noconfirm fzf
 sudo pacman -S --noconfirm wireshark-cli
-
-
+sudo pacman -S --noconfirm zip
+sudo pacman -S --noconfirm unzip
 
 # Drivers
 sudo pacman -S --noconfirm mesa   
