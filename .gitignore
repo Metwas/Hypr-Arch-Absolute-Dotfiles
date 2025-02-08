@@ -1,0 +1,6 @@
+*
+!./.config/wallpapers/*
+!./.config/hypr/*
+!./.config/rofi/*
+!./.config/nwg-look/*
+!.zshrc
