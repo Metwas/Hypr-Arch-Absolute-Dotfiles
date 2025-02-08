@@ -36,6 +36,8 @@ sudo pacman -S --noconfirm fzf
 sudo pacman -S --noconfirm wireshark-cli
 sudo pacman -S --noconfirm zip
 sudo pacman -S --noconfirm unzip
+sudo pacman -S --noconfirm conky
+sudo pacman -S --noconfirm cmatrix
 
 # Drivers
 sudo pacman -S --noconfirm mesa   
@@ -50,7 +52,6 @@ yay -S --noconfirm esp-idf
 yay -S --noconfirm cava
 yay -S --noconfirm yazi
 yay -S --noconfirm hollywood
-sudo pacman -S --noconfirm cmatrix
 
 # NVM (zsh)
 yay -S ttf-meslo-nerd-font-powerlevel10k
@@ -76,9 +77,6 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-
 # exec-once = waybar &
 # exec-once = hyprpaper &
 # exec-once = conky -c /home/metwas/.config/conky
-
-# Conky 
-pacman -S --noconfirm conky
 
 # Conky configuration
 conky.config = {
