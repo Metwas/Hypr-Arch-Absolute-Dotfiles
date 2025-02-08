@@ -2,13 +2,33 @@
 pacman -Syu --noconfirm
 
 # Hyprland base
-pacman -S --noconfirm hyprland rofi-wayland hyprpaper hyprlock xdg-desktop-portal-hyprland
+sudo pacman -S --noconfirm hyprland    
+pacman -S --noconfirm rofi-wayland 
+pacman -S --noconfirm hyprpaper 
+pacman -S --noconfirm hyprlock 
+pacman -S --noconfirm xdg-desktop-portal-hyprland 
 
 # waybar ??
 # pacman -S waybar
 
 # Tools
-pacman -S --noconfirm kitty fastfetch base-devel ninja gcc git make ncurses flex bison gperf python2-pyserial zsh fzf wireshark-cli cava yazi
+sudo pacman -S --noconfirm kitty        
+sudo pacman -S --noconfirm fastfetch
+sudo pacman -S --noconfirm base-devel
+sudo pacman -S --noconfirm ninja
+sudo pacman -S --noconfirm gcc
+sudo pacman -S --noconfirm git
+sudo pacman -S --noconfirm make
+sudo pacman -S --noconfirm ncurses
+sudo pacman -S --noconfirm flex
+sudo pacman -S --noconfirm bison
+sudo pacman -S --noconfirm gperf
+sudo pacman -S --noconfirm zsh
+sudo pacman -S --noconfirm fzf
+sudo pacman -S --noconfirm wireshark-cli
+
+yay -S --noconfirm cava
+yay -S --noconfirm yazi
 
 # Drivers
 pacman -S --noconfirm mesa xf86-video-amdgpu vulkan-radeon libva-mesa-driver
