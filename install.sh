@@ -40,6 +40,23 @@ sudo pacman -S --noconfirm zip
 sudo pacman -S --noconfirm unzip
 sudo pacman -S --noconfirm conky
 sudo pacman -S --noconfirm cmatrix
+sudo pacman -S grub
+
+sudo cat <<EOF | sudo tee -a /etc/default/grub
+GRUB_DEFAULT=0
+GRUB_TIMEOUT=5
+EOF
+
+sudo mkdir /boot/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+sudo mkdir /etc/systemd/getty@tty1.service.d
+
+sudo cat <<EOF | sudo tee -a /etc/systemd/getty@tty1.service.d/autologin.conf
+[Service]
+ExecStart=
+ExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin metwas %I $TERM
+EOF
 
 # Drivers
 sudo pacman -S --noconfirm mesa   
