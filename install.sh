@@ -63,6 +63,7 @@ sudo pacman -S --noconfirm btop
 sudo pacman -S --noconfirm go
 sudo pacman -S --noconfirm grub
 sudo pacman -S --noconfirm thunar
+sudo pacman -S --noconfirm brightnessctl
 
 # YAY
 git clone https://aur.archlinux.org/yay-bin.git
