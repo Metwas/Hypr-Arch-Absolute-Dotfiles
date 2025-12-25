@@ -5,6 +5,7 @@ sudo pacman -Sc --noconfirm
 sudo pacman-key --populate archlinux
 sudo pacman -Sy archlinux-keyring
 sudo pacman -Syu --noconfirm
+sudo pacman -Sy --noconfirm iwd
 
 # Hyprland base
 sudo pacman -S --noconfirm hyprland
