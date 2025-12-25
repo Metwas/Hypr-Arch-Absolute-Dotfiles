@@ -61,14 +61,15 @@ sudo pacman -S --noconfirm conky
 sudo pacman -S --noconfirm cmatrix
 sudo pacman -S --noconfirm btop
 sudo pacman -S --noconfirm go
-sudo pacman -S grub
+sudo pacman -S --noconfirm grub
+sudo pacman -S --noconfirm thunar
 
 # YAY
 git clone https://aur.archlinux.org/yay-bin.git
 cd ./yay-bin
-makepkg -si
+sudo makepkg -si
 
-sudo cat <<EOF | sudo tee -a /etc/default/grub
+sudo cat <<EOF | sudo tee /etc/default/grub
 GRUB_DEFAULT=0
 GRUB_TIMEOUT=0
 EOF
@@ -78,7 +79,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 sudo mkdir /etc/systemd/getty@tty1.service.d
 
-sudo cat <<EOF | sudo tee -a /etc/systemd/getty@tty1.service.d/autologin.conf
+sudo cat <<EOF | sudo tee /etc/systemd/getty@tty1.service.d/autologin.conf
 [Service]
 ExecStart=
 ExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin metwas %I $TERM
@@ -114,5 +115,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # ZSH THEME
 # git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+# Hyprland dotfiles
+git clone https://github.com/Metwas/arch-hypr-dotfiles.git ~/
 
+# Restart
 sudo systemctl daemon-reexec
