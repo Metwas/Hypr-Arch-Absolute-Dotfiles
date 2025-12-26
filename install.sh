@@ -35,6 +35,7 @@ sudo pacman -S --noconfirm rofi-wayland
 sudo pacman -S --noconfirm hyprpaper
 sudo pacman -S --noconfirm hyprlock
 sudo pacman -S --noconfirm xdg-desktop-portal-hyprland
+sudo pacman -S --noconfirm xorg-xwayland
 
 # waybar ??
 # pacman -S waybar
@@ -44,6 +45,7 @@ sudo pacman -S --noconfirm kitty
 sudo pacman -S --noconfirm fastfetch
 sudo pacman -S --noconfirm base-devel
 sudo pacman -S --noconfirm ninja
+sudo pacman -S --noconfirm clang
 sudo pacman -S --noconfirm gcc
 sudo pacman -S --noconfirm git
 sudo pacman -S --noconfirm make
@@ -116,8 +118,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # Must enter this in the .zshrc file
 # plugins=(zsh-nvm zsh-autosuggestions)
 
-# ZSH THEME
-# git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 # Hyprland dotfiles
 curl -L -O https://github.com/Metwas/arch-hypr-dotfiles/archive/refs/heads/main.zip
 sudo unzip ./main.zip
@@ -126,6 +126,13 @@ sudo mv ./arch-hypr-dotfiles-main/.* ~/
 
 sudo rm -rf ./temp
 sudo rm ./main.zip
+
+# autostart hyprland
+sudo cat <<EOF | sudo tee ~/.zprofile
+if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
+  exec Hyprland
+fi
+EOF
 
 # Restart
 sudo systemctl daemon-reexec
