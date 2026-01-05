@@ -10,7 +10,18 @@ sudo pacman -S --noconfirm wine winetricks sdl2-compat gst-plugins-base-libs gst
 sudo pacman -S --noconfirm pipewire pipewire-pulse pipewire-alsa lib32-pipewire lib32-pipewire-pulse lib32-libpulse lib32-alsa-lib lib32-alsa-plugins
 sudo pacman -S --noconfirm vulkan-radeon lib32-vulkan-radeon mesa lib32-mesa
 sudo pacman -S --noconfirm --needed gcc-libs lib32-gcc-libs glibc lib32-glibc
-sudo pacman -Syu
+sudo pacman -Syu --noconfirm
+sudo pacman -S --needed --noconfirm \
+  webkit2gtk-4.1 \
+  base-devel \
+  curl \
+  wget \
+  file \
+  openssl \
+  appmenu-gtk-module \
+  libappindicator-gtk3 \
+  librsvg \
+  xdotool
 
 # Hyprland base
 sudo pacman -S --noconfirm hyprland
