@@ -30,3 +30,6 @@ sudo pacman -S --noconfirm hyprpaper
 sudo pacman -S --noconfirm hyprlock
 sudo pacman -S --noconfirm xdg-desktop-portal-hyprland
 sudo pacman -S --noconfirm xorg-xwayland
+
+# Tools
+sudo pacman -S --noconfirm nmap
