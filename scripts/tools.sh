@@ -25,3 +25,5 @@ sudo pacman -S --noconfirm go
 sudo pacman -S --noconfirm grub
 sudo pacman -S --noconfirm thunar
 sudo pacman -S --noconfirm brightnessctl
+sudo pacman -S --noconfirm hyprshot
+sudo pacman -S --noconfirm hyprpicker
