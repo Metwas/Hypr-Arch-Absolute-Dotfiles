@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Essential networking
-sudo pacman -S --noconfirm iwd
+sudo pacman -S --needed --noconfirm iwd
 
 sudo mkdir /etc/iwd
 sudo mkdir /etc/systemd/resolved.conf.d
