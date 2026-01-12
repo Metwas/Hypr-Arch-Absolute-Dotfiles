@@ -1,29 +1,29 @@
 #!/bin/bash
 
-sudo pacman -S --noconfirm kitty
-sudo pacman -S --noconfirm fastfetch
-sudo pacman -S --noconfirm base-devel
-sudo pacman -S --noconfirm ninja
-sudo pacman -S --noconfirm clang
-sudo pacman -S --noconfirm gcc
-sudo pacman -S --noconfirm git
-sudo pacman -S --noconfirm make
-sudo pacman -S --noconfirm ncurses
-sudo pacman -S --noconfirm flex
-sudo pacman -S --noconfirm bison
-sudo pacman -S --noconfirm gperf
-sudo pacman -S --noconfirm zsh
-sudo pacman -S --noconfirm fzf
-sudo pacman -S --noconfirm wireshark-cli
-sudo pacman -S --noconfirm zip
-sudo pacman -S --noconfirm unzip
-sudo pacman -S --noconfirm rar
-sudo pacman -S --noconfirm conky
-sudo pacman -S --noconfirm cmatrix
-sudo pacman -S --noconfirm btop
-sudo pacman -S --noconfirm go
-sudo pacman -S --noconfirm grub
-sudo pacman -S --noconfirm thunar
-sudo pacman -S --noconfirm brightnessctl
-sudo pacman -S --noconfirm hyprshot
-sudo pacman -S --noconfirm hyprpicker
+sudo pacman -S --needed --noconfirm kitty
+sudo pacman -S --needed --noconfirm fastfetch
+sudo pacman -S --needed --noconfirm base-devel
+sudo pacman -S --needed --noconfirm ninja
+sudo pacman -S --needed --noconfirm clang
+sudo pacman -S --needed --noconfirm gcc
+sudo pacman -S --needed --noconfirm git
+sudo pacman -S --needed --noconfirm make
+sudo pacman -S --needed --noconfirm ncurses
+sudo pacman -S --needed --noconfirm flex
+sudo pacman -S --needed --noconfirm bison
+sudo pacman -S --needed --noconfirm gperf
+sudo pacman -S --needed --noconfirm zsh
+sudo pacman -S --needed --noconfirm fzf
+sudo pacman -S --needed --noconfirm wireshark-cli
+sudo pacman -S --needed --noconfirm zip
+sudo pacman -S --needed --noconfirm unzip
+sudo pacman -S --needed --noconfirm rar
+sudo pacman -S --needed --noconfirm conky
+sudo pacman -S --needed --noconfirm cmatrix
+sudo pacman -S --needed --noconfirm btop
+sudo pacman -S --needed --noconfirm go
+sudo pacman -S --needed --noconfirm grub
+sudo pacman -S --needed --noconfirm thunar
+sudo pacman -S --needed --noconfirm brightnessctl
+sudo pacman -S --needed --noconfirm hyprshot
+sudo pacman -S --needed --noconfirm hyprpicker
