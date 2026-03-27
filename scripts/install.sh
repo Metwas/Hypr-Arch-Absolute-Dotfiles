@@ -93,6 +93,9 @@ sudo pacman -S --needed --noconfirm brightnessctl
 sudo pacman -S --needed --noconfirm hyprshot
 sudo pacman -S --needed --noconfirm hyprpicker
 
+# Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # Apps
 yay -S --needed --noconfirm brave-bin
 yay -S --needed --noconfirm zed
@@ -104,8 +107,12 @@ yay -S --needed --noconfirm tty-clock
 sudo mkdir ./.config/zed
 sudo mkdir ./.config/zed/themes
 
-# Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+sudo rm -rf ./.oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+chsh -s $(which zsh)
 
 # Restart
 sudo systemctl daemon-reexec
