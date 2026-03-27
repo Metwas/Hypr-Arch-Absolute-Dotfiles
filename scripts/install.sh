@@ -5,22 +5,6 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd ./yay-bin
 sudo makepkg -si
 
-sudo cat <<EOF | sudo tee /etc/default/grub
-GRUB_DEFAULT=0
-GRUB_TIMEOUT=0
-EOF
-
-sudo mkdir /boot/grub
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-
-sudo mkdir /etc/systemd/getty@tty1.service.d
-
-sudo cat <<EOF | sudo tee /etc/systemd/getty@tty1.service.d/autologin.conf
-[Service]
-ExecStart=
-ExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin metwas %I $TERM
-EOF
-
 # Drivers
 sudo pacman -S --needed --noconfirm mesa
 sudo pacman -S --needed --noconfirm xf86-video-amdgpu
